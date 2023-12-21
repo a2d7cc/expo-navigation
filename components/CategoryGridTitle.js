@@ -1,6 +1,6 @@
 import { Platform, Pressable, StyleSheet, Text, View } from "react-native";
 
-function CategoryGridTitle({ title, color }) {
+function CategoryGridTitle({ title, color, onPress }) {
   return (
     <View style={styles.outer}>
       <Pressable
@@ -9,6 +9,7 @@ function CategoryGridTitle({ title, color }) {
           styles.button,
           pressed ? styles.pressed : null,
         ]}
+        onPress={onPress}
       >
         <View style={[{ backgroundColor: color }, styles.inner]}>
           <Text style={styles.title}>{title}</Text>
