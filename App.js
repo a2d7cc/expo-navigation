@@ -10,12 +10,20 @@ const Stack = createNativeStackNavigator();
 export default function App() {
   return (
     <SafeAreaView style={styles.container}>
-      <StatusBar style="light" />
+      <StatusBar style="dark" />
       <NavigationContainer initialRouteName="Categories">
-        <Stack.Navigator>
+        <Stack.Navigator
+          screenOptions={{
+            headerStyle: { backgroundColor: "#351401" },
+            headerTintColor: "white",
+            contentStyle: { backgroundColor: "#3f2f25" },
+          }}
+        >
           <Stack.Screen
             name="CategoriesScreen"
-            options={{ title: "Categories" }}
+            options={{
+              title: "All Categories",
+            }}
             component={CategoriesScreen}
           />
 
